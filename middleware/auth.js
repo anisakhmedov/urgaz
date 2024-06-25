@@ -10,10 +10,10 @@ export default defineNuxtRouteMiddleware(async (to, from) => {
         return nuxtApp.runWithContext(() => navigateTo('/auth'))
     }
 
-    export default defineNuxtRouteMiddleware((to, from) => {
-        const { $config } = useNuxtApp()
+    // export default defineNuxtRouteMiddleware((to, from) => {
+    //     const { $config } = useNuxtApp()
       
-        // Use $config or other properties from Nuxt instance here
-        console.log($config)
-      })
+    //     // Use $config or other properties from Nuxt instance here
+    //     console.log($config)
+    //   })
 })

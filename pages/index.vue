@@ -157,16 +157,6 @@
 
 
 <script setup>
-import { ref } from 'vue'
-import { useNuxtApp } from '#app'
-
-const { $config } = useNuxtApp()
-const isShow = ref(false)
-
-const toggleShow = () => {
-  isShow.value = !isShow.value
-}
-
 useHead({
     title: 'Каталог',
     meta: [

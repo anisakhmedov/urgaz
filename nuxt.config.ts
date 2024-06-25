@@ -20,13 +20,13 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/style.css'],
 
-  hooks: {
-    'render:routeContext'(context) {
-      const { $config } = useNuxtApp()
+  // hooks: {
+  //   'render:routeContext'(context) {
+  //     const { $config } = useNuxtApp()
 
-      // Use $config or other properties from Nuxt instance here
-      console.log($config)
-    }
-  }
+  //     // Use $config or other properties from Nuxt instance here
+  //     console.log($config)
+  //   }
+  // }
 
 })
