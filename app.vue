@@ -1,19 +1,17 @@
 <template>
   <div>
     <NuxtLayout>
-      <Header/>
       <NuxtPage />
-      <Footer/>
     </NuxtLayout>
   </div>
 </template>
 
-<script setup lang="ts">
+<script>
+export default {
+  name: 'App'
+}
+
 useHead({
-  title: 'Главная страница',
-  meta: [
-    { name: 'description', content: 'My amazing site.' }
-  ],
   bodyAttrs: {
     class: 'test'
   },

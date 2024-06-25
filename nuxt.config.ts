@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: false },
 
   runtimeConfig: {
     // The private keys which are only available server-side
@@ -20,38 +20,13 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/style.css'],
 
-  postcss: {
-    plugins: {
-      autoprefixer: {},
-    },
-  },
+  hooks: {
+    'render:routeContext'(context) {
+      const { $config } = useNuxtApp()
 
-  vite: {
-    vue: {
-      customElement: true
-    },
-    vueJsx: {
-      mergeProps: true
-    },
-    css: {
-      preprocessorOptions: {
-        scss: {
-          additionalData: '@use "~/assets/_colors.scss" as *;'
-        }
-      }
+      // Use $config or other properties from Nuxt instance here
+      console.log($config)
     }
-  },
-
-  webpack: {
-    loaders: {
-      vue: {
-        hotReload: true,
-      }
-    }
-  },
-
-  vue: {
-    propsDestructure: true
-  },
+  }
 
 })
