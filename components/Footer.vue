@@ -64,15 +64,13 @@
           <label for="">Комнаты</label>
           <li>
             <p>Самарканд</p>
-          </li>
-          <li>
             <p>Ургут Каратепа, Узбекистан</p>
           </li>
           <li>
-            <p>Телефон: +998990560000</p>
+            <a href="tel:+998990560000">Телефон: +998990560000</a>
           </li>
           <li>
-            <p>Эл. адрес: info@urgaz.com</p>
+            <a href="mailto:info@urgaz.com">Эл. адрес: info@urgaz.com</a>
           </li>
         </ul>
       </div>
