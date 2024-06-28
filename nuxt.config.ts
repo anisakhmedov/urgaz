@@ -18,15 +18,18 @@ export default defineNuxtConfig({
     }
   },
 
-  css: ['~/assets/css/style.css'],
-
   // hooks: {
   //   'render:routeContext'(context) {
   //     const { $config } = useNuxtApp()
-
   //     // Use $config or other properties from Nuxt instance here
   //     console.log($config)
   //   }
   // }
+  css: ['~/assets/css/style.css'],
 
+  modules: ["@nuxtjs/i18n"],
+  i18n: {
+    // Module Options
+    vueI18n: './i18n.config.ts'
+  }
 })

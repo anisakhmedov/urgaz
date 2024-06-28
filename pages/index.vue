@@ -190,7 +190,7 @@
                     </div>
                 </div>
                 <div class="wrapper">
-                    <div class="carpet" v-for="item of data" :key="item">
+                    <div class="carpet" v-for="item of fbData" :key="item">
                         <div class="img">
                             <img src="~/assets/img/test.jpg" alt="">
                             <div class="top">
@@ -202,7 +202,7 @@
                                 </div>
                             </div>
                             <div class="bottom">
-                                <p>{{ item.title}}</p>
+                                <p>{{ item.title }}</p>
                             </div>
                         </div>
                         <div class="discription">
@@ -223,7 +223,7 @@
                             </div>
                         </div>
                         <div class="btn">
-                            <Nuxt-link to="catalogue/id">
+                            <Nuxt-link to="/">
                                 Подробная информация
                             </Nuxt-link>
                         </div>
@@ -239,7 +239,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
-const data = ref([
+let data = ref([
     {
         title: 'title1',
         colors: Math.random().toString().slice(2, 3)
@@ -286,20 +286,23 @@ const data = ref([
     },
 ])
 
-let fbData = ref(data)
+let fbData = ref(data._rawValue)
 
 let isShow = ref(6)
 
 onMounted(() => {
-    for(let item of data._rawValue){
+    for (let item of data._rawValue) {
         item.colors = +item.colors
     }
-    console.log(data._rawValue);
-    console.log(fbData._rawValue);
+    fbData = data._rawValue.splice(0, 6)
 })
 
 const showMore = () => {
     isShow = isShow + 6
+    // console.log(fbData);
+    // console.log(data._rawValue);
+    // fbData = data._rawValue.splice(0, isShow)
+    // console.log(fbData);
 }
 
 useHead({

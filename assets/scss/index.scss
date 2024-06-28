@@ -13,8 +13,8 @@ input {
     outline: none !important;
 }
 
-button{
-    &:hover{
+button {
+    &:hover {
         cursor: pointer;
     }
 }
@@ -63,6 +63,7 @@ button{
 
 .footer {
     width: 100%;
+    margin-top: 21px;
     background-color: rgb(220, 9, 9);
     display: flex;
     align-items: center;
@@ -267,13 +268,14 @@ button{
         .main-side {
             display: flex;
             flex-direction: column;
+            align-items: center;
             .banner {
                 width: 100%;
                 padding: 35px 60px;
-                border-radius: 15px;
+                border-radius: 12px;
                 color: white !important;
                 background-image: url(../img/bg-banner.png);
-                background-position: center;
+                background-position: center !important;
                 background-size: cover;
                 background-repeat: no-repeat;
                 .title {
@@ -311,6 +313,7 @@ button{
                     justify-content: center;
                     background-color: rgb(220, 9, 9);
                     background-image: url(../img/logo/back-filter.png);
+                    background-position: center !important;
                     background-size: cover;
                     background-repeat: no-repeat;
                     font-size: 16px;
@@ -347,6 +350,9 @@ button{
                     }
                 }
                 .filtr-inp {
+                    .hidden {
+                        display: none;
+                    }
                     .show {
                         border: 2px solid #a0a0a0;
                         display: flex;
@@ -356,7 +362,7 @@ button{
                         justify-content: space-between;
                         border-radius: 12px;
                         align-items: center;
-                        &:hover{
+                        &:hover {
                             cursor: pointer;
                         }
                         p {
@@ -426,14 +432,14 @@ button{
                             }
                         }
                     }
-                    .discription{
+                    .discription {
                         padding: 17px;
-                        p{
+                        p {
                             font-size: 24px;
                             font-weight: 600;
                             margin-bottom: 7px;
                         }
-                        .colors{
+                        .colors {
                             display: flex;
                             align-items: end;
                             gap: 4px;
@@ -441,44 +447,63 @@ button{
                             flex-wrap: wrap;
                             max-height: 60px;
                             overflow: hidden;
-                            span{
+                            span {
                                 font-size: 25px;
                             }
-                            .item{
+                            .item {
                                 width: 60px;
                                 border-radius: 6px;
                                 height: 60px;
                                 background-color: rgb(220, 9, 9);
                             }
                         }
-                        .disc{
+                        .disc {
                             display: flex;
                             align-items: center;
                             justify-content: space-between;
                             width: 100%;
-                            p{
+                            p {
                                 margin-bottom: 0 !important;
                             }
-                            span{
+                            span {
                                 font-size: 18px;
                                 color: #787878;
                                 font-weight: 600;
                             }
                         }
                     }
-                    .btn{
+                    .btn {
                         width: 100%;
                         padding: 15px 0;
                         display: flex;
                         align-items: center;
                         justify-content: center;
                         background-color: rgb(220, 9, 9);
-                        a{
+                        a {
                             color: white;
                             font-weight: 600;
                             font-size: 18px;
                         }
                     }
+                }
+            }
+            button {
+                height: 43px;
+                padding: 18px 72px;
+                display: flex;
+                border: none;
+                margin-top: 21px;
+                width: fit-content;
+                color: white;
+                font-size: 15px;
+                border-radius: 10px;
+                font-weight: 600;
+                align-items: center;
+                justify-content: center;
+                background-color: rgb(220, 9, 9);
+                background-image: url(../img/logo/back-filter.png);
+                &:hover {
+                    cursor: pointer;
                 }
             }
         }

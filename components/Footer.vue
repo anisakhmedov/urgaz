@@ -29,16 +29,16 @@
         <ul>
           <label for="">Каталог</label>
           <li>
-            <Nuxt-link to="/catalogue">Каталог</Nuxt-link>
+            <Nuxt-link to="/">Каталог</Nuxt-link>
           </li>
           <li>
-            <Nuxt-link to="/catalogue">Каталог</Nuxt-link>
+            <Nuxt-link to="/">Каталог</Nuxt-link>
           </li>
           <li>
-            <Nuxt-link to="/catalogue">Каталог</Nuxt-link>
+            <Nuxt-link to="/">Каталог</Nuxt-link>
           </li>
           <li>
-            <Nuxt-link to="/catalogue">Каталог</Nuxt-link>
+            <Nuxt-link to="/">Каталог</Nuxt-link>
           </li>
         </ul>
       </div>

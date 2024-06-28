@@ -4,9 +4,9 @@
       <img src="~/assets/img/logo/LOGO.png" alt="">
     </div>
     <nav class="nav-text">
-      <Nuxt-link to="/">Главная</Nuxt-link>
+      <Nuxt-link to="/">{{ $t('header.main') }}</Nuxt-link>
       <Nuxt-link to="company">О компании</Nuxt-link>
-      <Nuxt-link to="/catalogue">Каталог</Nuxt-link>
+      <Nuxt-link to="/">Каталог</Nuxt-link>
       <Nuxt-link to="/contact">Контакты</Nuxt-link>
     </nav>
     <nav class="nav-icons">
